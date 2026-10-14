@@ -1,4 +1,4 @@
-# Technical Repair Services
+# Mock Technical Repair Services
 
 A static landing page mockup for a computer repair service. It introduces the service, lists common repair options, and provides a booking form layout.
 
