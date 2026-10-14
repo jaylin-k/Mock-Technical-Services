@@ -1,0 +1,468 @@
+body{
+    display: flex; flex-direction: column; justify-content: center; margin: 0; scroll-behavior: smooth;
+}
+.title-nav{
+    display: grid; grid-template-columns: repeat(2, 2fr); background-color: rgba(8, 19, 65, 0.772); color: white;
+}
+.title{padding-left: 70px;}
+.title h1 {font-size: 3rem; font-weight: 600;}
+.nav-grid{display: grid;
+    grid-auto-flow: row;
+    align-content: center;
+    align-items: stretch;
+    justify-content: end;
+    justify-items: end;
+    padding-right: 70px;
+}
+
+nav{display: flex; gap: 20px; text-align: center; align-items: center; justify-content: flex-end; }
+nav li{list-style: none;}
+li a {text-decoration: none; color: white; }
+li a:hover{color: rgb(221, 255, 0); text-decoration: underline;}
+
+
+#about{display: grid; background-image: linear-gradient(to right,rgba(65, 180, 125, 0.58), rgba(196, 237, 120, 0.687)); padding: 30px 4rem;}
+.title-abt{text-align: center;}
+.abt-content{text-align: center;}
+
+
+
+
+
+
+.form {
+    display: flex; flex-direction: column; justify-content: center; align-items: center; background-color: rgb(255, 255, 255); padding: 20px;
+}
+.form label{
+    padding: 0px; margin: 0;
+}
+.form-container{display: grid; grid-template-columns: repeat(2, 1fr); }
+
+input, select, textarea{outline-style: none;}
+
+#bookingform{
+    display: grid; grid-template-columns: repeat(2, 1fr); column-gap: 10px; row-gap: 10px; padding: 0px 50px; background-color: white;
+}
+.opt1, .opt2, .opt3, .opt4, .opt-email{
+    padding: 10px;
+}
+.opt6{
+    float: right;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 20px;
+    padding: 20px 20px;
+    font-weight: 600;
+    font-size: .7rem;
+    color: rgba(21, 0, 255, 0.505);
+    cursor: pointer;
+}
+.opt6:hover{
+    background-color: transparent;
+    color: rgba(21, 0, 255, 0.79);
+    cursor: pointer;
+}
+.btn-clear{
+    grid-column: 1 / 3;
+}
+
+.opt5{
+    background: #007bff;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-weight: 600;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+}
+.opt5:hover{
+    background: #0056b3;
+    border: 1px solid rgba(255,255,255,0.5);
+    box-shadow: 0 8px 32px 0 rgba(31,38,135,0.2);
+    transition: all 0.3 ease;
+    transform: translateY(-2px);
+}
+.opt5:active{
+    transform: translateY(0);
+}
+.btn-submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: 1/3;
+}
+.btn-space{
+    padding: 10px;
+}
+.row2-left,.row2-right,.row3-full,.row4-left,.row4-right, .row5-full{
+    display: flex; flex-direction: column; justify-content: center;
+    align-items: left;
+}
+.heading{
+    grid-row: 1;
+    padding-bottom: 10px;
+}
+.row2-left{
+    grid-column: 1;
+    grid-row: 2;
+}
+.row2-right{
+    grid-column: 2;
+    grid-row: 2;
+}
+.row3-full{
+    grid-column:1/3;
+    grid-row: 3;
+}
+.row4-left{
+    grid-column: 1;
+    grid-row: 4;
+}
+.row4-right{
+    grid-column: 2;
+    grid-row: 4;
+}
+.row5-full{
+    grid-column: 1/3;
+    grid-row: 5;
+}
+textarea{
+    padding: 10px;
+    resize: none;
+}
+
+.section-info{
+    display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; padding-left: 50px;
+}
+
+h2{
+    margin-bottom:0px;
+    padding: 0;
+}
+.section-info p{
+    margin: 0;
+    padding-bottom: 10px;
+}
+.form-p{
+    margin: 0;
+}
+
+footer{
+    display: flex; flex-direction: row; justify-content: space-evenly; align-items: center; 
+    
+    background-color: rgba(8, 19, 65, 0.772);
+    color: white;
+}
+
+.nav-footer{
+    display: flex; gap: 20px; text-align: center; align-items: center; justify-content: center; padding-left: 20px;
+}
+.nav-footer li{list-style: none;}
+.nav-footer li a {text-decoration: none; color: white; }
+.nav-footer li a:hover {text-decoration: underline; color: rgb(221, 255, 0); }
+
+
+/* Mobile navigation control: hidden on desktop, shown on screens under 480px. */
+.menu-toggle,
+.hamburger {
+    display: none;
+}
+
+.main-nav ul {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 480px) {
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    body {
+        width: 100%;
+        overflow-x: hidden;
+        font-size: 16px;
+    }
+
+    .content-container {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .title-nav {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 8px;
+        padding: 14px 16px;
+    }
+
+    .title {
+        padding-left: 0;
+    }
+
+    .title h1 {
+        margin: 0;
+        font-size: clamp(1.65rem, 7vw, 2rem);
+        line-height: 1.15;
+    }
+
+    .nav-grid {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 0;
+        min-width: 0;
+    }
+
+    .nav-grid .date {
+        margin: 0 auto 0 0;
+    }
+
+    .menu-toggle {
+        position: absolute;
+        display: block;
+        width: 48px;
+        height: 48px;
+        right: 0;
+        top: 0;
+        margin: 0;
+        opacity: 0;
+        cursor: pointer;
+        z-index: 3;
+    }
+
+    .hamburger {
+        display: flex;
+        width: 48px;
+        height: 48px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        cursor: pointer;
+        border-radius: 8px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .hamburger span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        border-radius: 2px;
+        background-color: white;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .menu-toggle:focus-visible + .hamburger {
+        outline: 2px solid rgb(221, 255, 0);
+        outline-offset: 2px;
+    }
+
+    .main-nav {
+        display: none;
+        flex-basis: 100%;
+        width: 100%;
+        padding-top: 8px;
+    }
+
+    .main-nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 4px;
+        width: 100%;
+    }
+
+    .main-nav li,
+    .main-nav a {
+        display: block;
+        width: 100%;
+    }
+
+    .main-nav a {
+        min-height: 48px;
+        display: flex;
+        align-items: center;
+        padding: 12px;
+    }
+
+    .menu-toggle:checked ~ .main-nav {
+        display: block;
+    }
+
+    .menu-toggle:checked + .hamburger span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .menu-toggle:checked + .hamburger span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle:checked + .hamburger span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    #about {
+        grid-template-columns: minmax(0, 1fr);
+        padding: 24px 16px;
+    }
+
+    .title-abt h2,
+    h2 {
+        font-size: 1.35rem;
+        line-height: 1.3;
+    }
+
+    .abt-content {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .form {
+        padding: 16px;
+        align-items: stretch;
+    }
+
+    .form-container {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .section-info {
+        padding-left: 0;
+        min-width: 0;
+        font-size: 0.95rem;
+        line-height: 1.55;
+    }
+
+    .section-info h2 {
+        font-size: 1.3rem;
+        margin-bottom: 8px;
+    }
+
+    #bookingform {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        column-gap: 0;
+        row-gap: 14px;
+        padding: 0;
+        width: 100%;
+        min-width: 0;
+    }
+
+    #bookingform .heading,
+    #bookingform .row2-left,
+    #bookingform .row2-right,
+    #bookingform .row3-full,
+    #bookingform .row4-left,
+    #bookingform .row4-right,
+    #bookingform .row5-full,
+    #bookingform .btn-submit,
+    #bookingform .btn-clear {
+        grid-column: 1;
+        grid-row: auto;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .row2-left,
+    .row2-right,
+    .row3-full,
+    .row4-left,
+    .row4-right,
+    .row5-full {
+        align-items: stretch;
+    }
+
+    #bookingform label {
+        display: block;
+        margin-bottom: 6px;
+        font-size: 0.95rem;
+    }
+
+    #bookingform input,
+    #bookingform select,
+    #bookingform textarea {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        min-height: 48px;
+        padding: 12px;
+        font: inherit;
+        font-size: 16px;
+    }
+
+    #bookingform textarea {
+        min-height: 120px;
+        resize: vertical;
+    }
+
+    .btn-submit {
+        justify-content: stretch;
+    }
+
+    .btn-space {
+        width: 100%;
+        padding: 0;
+    }
+
+    .opt5,
+    .opt6 {
+        min-height: 48px;
+        padding: 12px 20px;
+        font-size: 0.9rem;
+        touch-action: manipulation;
+    }
+
+    .opt5 {
+        width: 100%;
+    }
+
+    .opt6 {
+        float: none;
+        width: 100%;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 12px;
+        align-items: stretch;
+        padding: 20px 16px;
+        text-align: center;
+        font-size: 0.85rem;
+    }
+
+    footer p {
+        margin: 0;
+        line-height: 1.5;
+    }
+
+    .nav-footer {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px 16px;
+        padding-left: 0;
+    }
+
+    .nav-footer a {
+        display: inline-flex;
+        align-items: center;
+        min-height: 48px;
+        padding: 8px;
+    }
+}
